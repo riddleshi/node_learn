@@ -2,9 +2,13 @@ const express = require('express');
 const app = express();
 app.set ('view engine','ejs')
 app.get('/', (req, res) => {
-    console.log(req.url)
+    console.log(req.params)
     res.render('index');
 });
+/*app.post("/messages",(req, res) => {
+    console.log(req.url)
+    res.send("This is where you can see any messages.");
+});*/
 app.get('/about.ejs', (req, res) => {
     console.log(req.url)
     res.render('about');
